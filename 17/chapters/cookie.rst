@@ -135,10 +135,10 @@ The sensible place to assume a user enters the Rango site is at the index page. 
 	        # Cookie last_visit doesn't exist, so flag that it should be set.
 	        reset_last_visit_time = True
 	
-		context_dict['visits'] = visits
+	    context_dict['visits'] = visits
 		
-	        #Obtain our Response object early so we can add cookie information.
-		response = render(request, 'rango/index.html', context_dict)
+	    #Obtain our Response object early so we can add cookie information.
+	    response = render(request, 'rango/index.html', context_dict)
 
 	    if reset_last_visit_time:
 		response.set_cookie('last_visit', datetime.now())
